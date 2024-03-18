@@ -1,0 +1,25 @@
+{
+  "name": "mongodb-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts",
+    "build:clean": "rm -rf ./dist/*; rm ./dist/*; mkdir ./dist/logs;",
+    "build:config": "cp ./src/config.json ./dist/config.json; cp ./package.json ./dist/package.json",
+    "build": "tsc --skipLibCheck;"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "mongodb": "^6.5.0",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.28"
+  }
+}
