@@ -1,3 +1,5 @@
+// POST: http://localhost:3000/customers
+
 export async function createCustomerController(req: any, res:any) {
     try {
         const { db } = req.app;
@@ -48,7 +50,7 @@ export async function createCustomerController(req: any, res:any) {
 
 
         // error handling 
-        
+
         if (result.acknowledged) {
             res.status(200).json({ message: 'Customer created' })
         } else {
