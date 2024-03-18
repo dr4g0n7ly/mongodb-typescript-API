@@ -15,7 +15,8 @@ async function start() {
             limit: '500kb'
         }))
 
-
+        // Routes
+        app.use('/customers', require('./routes/customers'))
 
         //  Start server
         app.listen(3000, () => {
